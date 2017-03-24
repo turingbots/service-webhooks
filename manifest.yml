@@ -1,8 +1,7 @@
 applications:
 - name: service-webhook
-  buildpack: https://github.com/cloudfoundry/java-buildpack.git
-  memory: 512M
-  disk_quota: 256M
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git#v3.14
+  memory: 256M
   instances: 1
   host: service-webhook
   path: build/libs/service-webhook-0.1.0.jar

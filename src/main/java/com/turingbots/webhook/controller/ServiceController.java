@@ -43,7 +43,8 @@ public class ServiceController {
         // SuccessResponse response = getOutputFromNlpService(input);
         // Object data = response.getData();
         String accountNumber = input.getAccountNumber();
-        String outPutFromNlpService = "Accounts";
+//        String outPutFromNlpService = "Accounts";
+        String outPutFromNlpService = input.getInput();
         SuccessResponse outputFromAimlService = getOutputFromAimlService(accountNumber, outPutFromNlpService);
         // assume out put from nlpservice is success
         return new ResponseEntity<>(outputFromAimlService, HttpStatus.OK);
